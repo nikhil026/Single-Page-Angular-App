@@ -1,0 +1,30 @@
+<h1 >{{message}}</h1>
+<b>You may want to know about the faculty we Have !</b>
+<br>
+Search using First Input !<br>
+Choose No of Rows To Be Shown Second Input! <br>
+Start Rows From Third Input!<br><br>
+<input  class="search" ng-model="search" placeholder="search?">
+<input  class="search" type="number" min="0" max="7" ng-model="rows" placeholder="No of Rows">
+<input  class="search" type="number" min="0"  ng-model="startFrom" placeholder="Start From !">
+<table  style="border:solid black 1px">
+<thead>
+<tr>
+<th> Name</th>
+<th> Age </th>
+<th>Date Of Birth </th>
+<th>City</th>
+<th>Qualification</th>
+ </tr>
+ </thead>
+ <tbody>
+   <tr ng-repeat="x in teachers |orderBy:age |limitTo:rows:startFrom |filter:search">
+	<td >{{x.name }}</td>
+	<td >{{x.age }}</td>
+	<td>{{x.DOB | date:"dd/MM/yyyy"}}</td>
+	<td >{{x.city }}</td>
+	<td >{{x.Qualification}}</td>
+   </tr>
+ </tbody>
+</table>
+

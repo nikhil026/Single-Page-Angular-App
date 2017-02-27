@@ -1,0 +1,20 @@
+
+
+<h3>We Offer you these courses !</h3>
+
+
+<br>
+<ul>
+<li ng-repeat="course in courses" >
+{{course}}
+</li>
+</ul>
+Select The Course From Complete List :
+<select ng-model="Input">
+<option value="" disabled >Select </option> 
+<option ng-repeat="x in courses"  >{{x}}</option>
+</select>
+<br><br>
+
+You seem to be interested in the following course :- <b>{{Input}}</b>
+

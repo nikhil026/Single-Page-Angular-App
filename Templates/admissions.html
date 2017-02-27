@@ -1,0 +1,32 @@
+<h1>Online Courses !</h1>
+<form name="myForm" novalidate="" action="http://www.google.in" method="get">
+Name:   &emsp; &emsp; &emsp; &nbsp; 
+<input type="text" name="user" ng-model="name" placeholder="Enter name"required>
+<span ng-show="myForm.user.$touched && myForm.user.$invalid">
+   <span   ng-show="myForm.user.$error.required">
+*Name Required 
+    </span>
+</span> 
+<br>
+UserName: &emsp; &emsp;<input type="email" name="email" ng-model="email"
+placeholder="Email Address" required>
+<span ng-show="myForm.email.$touched && myForm.email.$invalid">
+   <span  ng-show="myForm.email.$error.required">
+*Username Req.
+    </span>
+    <span   ng-show="myForm.email.$error.email" >
+*Enter Valid Email
+    </span>
+</span>
+<br>
+
+Password:&emsp; &emsp; &nbsp;  <input type="password" name="password" ng-model="password" placeholder="Enter password " required>
+<span ng-show="myForm.password.$touched && myForm.password.$invalid">
+   <span   ng-show="myForm.password.$error.required">
+*Password Req.
+    </span>
+</span>
+<br>
+<br>
+<input type="submit" id="submit" value="Submit" ng-disabled="myForm.user.$touched && myForm.user.$invalid || myForm.email.$touched && myForm.email.$invalid ||myForm.password.$touched && myForm.password.$invalid ">
+</form>

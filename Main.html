@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="scripts/config.js"></script>
+<link href="style.css"  rel="stylesheet"/>
+
+</head>
+<div id="top"><h1>Course Arena </h1></div>
+<body ng-app="myApp">
+<ul id="mainMenu">
+<li><a href="#/">Home</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#teachers">Teachers</a></li>
+<li><a href="#admissions">Admissions</a></li>
+<li><a href="#more">More</a></li>
+</ul>
+<div id="sideBar" >
+<h1>Angular Involved !  !</h1>
+    <h3><ul>
+     <li>Data Binding ! </li>
+    <li>Form Validation </li>
+    <li>Filters 
+    <ul><li>Search!</li>
+    <li>OrderBy(sorting)!</li>
+    </ul>
+    </li>
+    <li>ng-Route Module
+    <ul><li>$routeProvider Service</li>
+    </ul></li>
+    <li>Templating</li>
+    <li>Controllers</li>
+    </ul></h3>
+</div>
+<div id="bottom" ng-controller="myCtrl">Thanks for Visiting !<br> Liked Us Or Not<br>
+<input type="button" value="like" 
+                   ng-click="incrementLikes()">{{likes}} &nbsp;&nbsp;
+
+<input type="button" value="dislike" 
+                   ng-click="incrementdisLikes()">{{dislikes}}
+
+</div>
+<div id="viewHolder">
+<div  ng-view id="view"></div>
+</div>
+<br><br><br>
+<hr color="red">
+
+
+</body>
+</html>
